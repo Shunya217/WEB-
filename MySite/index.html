@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <!-- レスポンシブデザイン用のビューポート設定　-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- CSSファイルの読み込み -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <title>MySite</title>
+</head>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="script.js"></script>
+
+  <body>
+
+    <!-- header -->
+  <header>
+    <h1 class="heading sm-logo">
+        <a href="index.html">
+            <img src="img/mysite.png" alt="mysite.png">
+        </a>
+    </h1>
+    <input id="drawer_input" class="drawer_hidden" type="checkbox">
+    <!--ハンバーガーアイコン -->
+    <label for="drawer_input" class="drawer_open">
+        <span></span>
+    </label>
+    <nav>
+      <h1 class="heading pc-logo">
+        <a href="index.html">
+          <img src="img/mysite.png" alt="mysite.png">
+        </a>
+      </h1>
+      <ul class="nav-list">
+        <li class="nav-list-item">
+          <a href="pages/works.html">Works</a>
+        </li>
+        <li class="nav-list-item">
+          <a href="#Profile">Profile</a>
+        </li>
+        <li class="nav-list-item">
+          <a href="pages/blogs.html">Blogs</a>
+        </li>
+        <li class="nav-list-item">
+          <a href="pages/contact.html">
+            <p class="nav-contact">Contact</p>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+      <div class="main-visual">
+        <div class="main-visual-text">
+          <p class="main-visual-title">John Smith</p>
+          <p class="main-visual-subtitle">Hi, I'm John Smith, a web designer passionate about crafting beautiful and<br>
+            user-friendly websites. Explore my portfolio below</p>
+        </div>
+      </div>
+
+
+
+    <main>
+      <section class="Works">
+        <h2 class="title-works">Works</h2>
+        <div class="border_line"></div>
+        <div class="main-contents">
+          <a href="pages/works.html#case-study01">
+            <div class="main-contents-box desk"></div>
+          </a>
+          <a href="pages/works.html#case-study02">
+            <div class="main-contents-box pc-blue"></div>
+          </a>
+          <a href="pages/works.html#case-study03">
+            <div class="main-contents-box write-board"></div>
+          </a>
+          <a href="pages/works.html#case-study04">
+            <div class="main-contents-box pc-yellow"></div>
+          </a>
+          <a href="pages/works.html#case-study05">
+            <div class="main-contents-box talk"></div>
+          </a>
+          <a href="pages/works.html#case-study06">
+            <div class="main-contents-box pc-pink"></div>
+          </a>
+
+        </div>
+        <div class="viewall">
+          <div class="viewall-container">
+            <a href="pages/works.html">view all</a>
+          </div>
+        </div>
+      </section>
+      <section id="Profile">
+        <div class="Profile">
+          <div class="Profile-container">
+            <h2 id="Profile-title">Profile</h2>
+            <div class="border_line"></div>
+            <p class="Profile-text">
+              初めまして、東京を拠点に活動するWebデザイナーのJohn Smithと申します。美しいデザインとユーザーエク
+              スペリエンスに情熱を注ぎ、クライアントのビジョンを実現させます。ユーザーセンターのアプローチで、使い
+              やすさと視覚的な魅力を融合し、オンラインプレゼンスを強化します。柔軟な対応とクリエイティブな解決策
+              で、お客様のニーズに応えることを心がけております。共に素晴らしいウェブデザインを実現しましょう。どう
+              ぞよろしくお願いいたします。
+            </p>
+            <div class="Profile-contents">
+              <div class="Profile-image">
+                <img src="img/my-icon.png" width="250px" height="250px">
+              </div>
+              <div class="Name-and-Skill">
+                <div class="Name-container">
+                  <h3 class="MyName-title">Jhon Smith</h3>
+                  <p class="MyName-text">
+                    平成生まれ、東京育ち。小さい頃から何かをつくるのが好きで、美大に進学。<br>
+                    大手広告代理店での2年間の経験を経て独立。幅広い業
+                    界のクライアントと協力し、ユーザーセンターのデザイ
+                    ンを追求した経験を生かし、現在はフリーランスとして
+                    グラフィックデザインやウェブデザイン、CIデザインな
+                    ど、幅広く活動中
+                  </p>
+                </div>
+                <div class="MySkill-container">
+                  <h3 class="MySkill-title">MySkill</h3>
+                  <p class="MySkill-text">
+                    Adobe XD / Adobe Illustrator / Adobe Photoshop / Sketch / Figma / ProtoPie / STUDIO / Adobe After Effects...
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="Blogs">
+        <div class="blogs-container">
+          <h2 class="blogs-title">Blogs</h2>
+          <div class="border_line"></div>
+          <div class="blogs-pagelink">
+            <a href="pages/blogs.html">ブログ一覧</a>
+          </div>
+          <div class="blogs-contents-box">
+            <div class="blog-box">
+              <a href="pages/blog.html">
+                <div class="blog-image">
+                  <img src="img/blog1.jpg" width="272px" height="177px" class="image">
+                </div>
+                <div class="blog-update-date">2023/08/03 12:00:00</div>
+                <div class="blog-page-title">STUDIOで描く未来。フリーランスWebデザイナーの展望と挑戦とは!?</div>
+              </a>
+            </div>
+            <div class="blog-box">
+              <div class="blog-image">
+                <img src="img/blog2.jpg" width="272px" height="177px" class="image">
+              </div>
+              <div class="blog-update-date">2023/08/03 12:00:00</div>
+              <div class="blog-page-title">私の未来を描くめに。<br>共感と効果のあるデザインプロセス</div>
+            </div>
+            <div class="blog-box">
+              <div class="blog-image">
+                <img src="img/blog3.jpg" width="272px" height="177px" class="image">
+              </div>
+              <div class="blog-update-date">2023/08/03 12:00:00</div>
+              <div class="blog-page-title">写真展より。インスピレーションから生まれた今後のデザイン課題</div>
+            </div>
+            <div class="blog-box">
+              <div class="blog-image">
+                <img src="img/blog4.jpg" width="272px" height="177px" class="image">
+              </div>
+              <div class="blog-update-date">2023/08/03 12:00:00</div>
+              <div class="blog-page-title">デザインの未来を拓く!セミナーから得ることができた情報と気づき</div>
+            </div>
+            <div class="blog-box">
+              <div class="blog-image">
+                <img src="img/blog5.jpg" width="272px" height="177px" class="image">
+              </div>
+              <div class="blog-update-date">2023/08/03 12:00:00</div>
+              <div class="blog-page-title">初の海外ロケが私にもたらしたこれまでに無かったクリエイティブな発想</div>
+            </div>
+            <div class="blog-box">
+              <div class="blog-image">
+                <img src="img/blog6.jpg" width="272px" height="177px" class="image">
+              </div>
+              <div class="blog-update-date">2023/08/03 12:00:00</div>
+              <div class="blog-page-title">ワーケーションで見つけた！新しいクリエイティを生み出すスタイル</div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-container">
+        <a href="pages/contact.html">
+          <div class="footer-buttoncontact">
+            <div class="button-text">Contact</div>
+          </div>
+        </a>
+        <div class="footer-icon-container">
+          <a href="index.html">
+            <div class="footer-icon-facebook"></div>
+          </a>
+          <a href="index.html">
+            <div class="footer-icon-X"></div>
+          </a>
+          <a href="index.html">
+            <div class="footer-icon-instagram"></div>
+          </a>
+        </div>
+        <div class="line"></div>
+        <p class="footer-copyright">©2024 My Site</p>
+      </div>
+    </footer>
+  </body>
+</html>

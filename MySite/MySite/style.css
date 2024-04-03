@@ -1,0 +1,690 @@
+/* ブラウザがそれぞれ持っているCSSをリセットするための記述 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header{
+  width: 100%; /* 横幅100% */
+  height: 70px; /* 高さ70px */
+  background-color: #EC715F; /* 背景色をカラーコードで指定 */
+}
+
+.heading img{
+  height: 70px; /* 高さ70px */
+}
+
+nav{
+  width: 960px; /* 横幅960px */
+  height: 70px; /* 高さ70px */
+  margin: 0 auto;  /* 中央寄せ */
+  display: flex; /* flexboxを設定 */
+  justify-content: flex-end; /* 子要素を右詰めで順に並べるように設定する */
+}
+
+nav > :first-child {
+  margin-right: auto;
+  /*
+    上のjustify-contentで、navの子要素を右から順に並べて形に設定したものを、
+    :first-childで最初の子要素を指定、左寄せで並べるようにする。
+    今回の場合は子要素のheadingクラスを左寄せに設定します。
+    同じく子要素であるnav-listクラスは右寄せになります。
+  */
+}
+
+.nav-list{
+  width: 560px; /* 横幅560px */
+  vertical-align: top;
+  display: flex; /* flexboxを設定 */
+  justify-content: flex-end; /* 要素を右詰めで順に並べるように設定する */
+}
+
+.nav-list-item{
+  height: 70px;
+  margin: 0 30px; /* 上下に0pxの隙間、左右に30pxずつの隙間を発生させる。 */
+  list-style: none; /* li使用時に発生する黒丸を削除 */
+  line-height: 70px; /* 行の高さを70pxに設定し、縦方向に中央寄せで文字を配置する */
+  text-align: center; /* 横方向に中央寄せで文字を配置する。*/
+  color: white; /* 文字色を白に変更 */
+  font-family: Noto sans JP;
+  font-weight: bold;
+}
+
+.nav-list-item a{
+  text-decoration: none; /* リンクに設定した場合発生する文字の装飾を解除。 */
+  color: white; /* リンクを設定すると文字が青色になってしまうので、白に変更 */
+}
+
+.nav-list-item a:hover {
+  display: inline;
+  text-decoration: none;
+  border-bottom: 2px #F2D6D2 solid ;
+}
+
+.nav-list > :last-child {
+  display: inline-block;
+  width: 118px;
+  height: 32px;
+  background-color: white;
+  line-height: 32px;
+  margin-top: 19px;
+  border-radius: 30px;
+}
+
+.nav-list  > :last-child:hover {
+  background-color: #F2D6D2;
+}
+
+.nav-contact{
+  color: #EC715F;
+}
+
+
+.main-visual{
+  width: 100%; /* 横幅いっぱい */
+  height: 650px; /* 高さ650px */
+  background-image: url(img/mv.png); /* 背景画像を設定、imgフォルダ内のmv.pngを使用 */
+  background-size: cover; /* 縦横比を維持したまま背景領域を埋め尽くす */
+  background-position: center; /* 背景画像を中央に配置 */
+}
+
+.main-visual-text{
+  width: 736px; /* 横幅650px */
+  height: 650px; /* 高さ650px */
+  margin: 0 auto; /* 中央寄せ */
+  text-align: center; /* 横方向に中央寄せで文字を配置する。*/
+  color:white;  /* 文字色を白に変更 */
+  font-family: Raleway;
+}
+.main-visual-title{
+  padding-top: 249px; /* 上方向に220pxの余白を設定。背景色はないので空白が発生 */
+  font-size: 120px; /* 文字のサイズを60pxに設定 */
+  font-weight: bold;
+  line-height: 120%;
+}
+
+.main-visual-subtitle{
+  font-size: 18px; /* 文字のサイズを18pxに設定 */
+  line-height: 200%; /* 行の高さを38pxに設定、文字の大きさが18pxなので上下に10pxの余白が発生する */
+  font-weight: 600;
+}
+
+/* .mainをmainに変更して、専用タグのmainを指定するように設定する。 */
+main{
+  width: 100%; /* 横幅いっぱい */
+}
+
+
+.Works{
+  text-align: center; /* .portfolio内の文字はすべて横方向に中央寄せなのでまとめて設定 */
+  margin-top: 128px;
+}
+
+.title-works{
+  font-size: 36px;
+  font-family: Raleway;
+  line-height: 160%;
+  color: #414141;
+}
+
+.border_line{
+    width: 30px; /* 横幅60px */
+    height: 6px; /* 高さ8px */
+    border-bottom: 6px solid #EC715F; /* 要素の下に3pxのpink色の直線を引く */
+    border-radius: 3px;
+    margin: 6px auto 64px;  /* 中央寄せ */
+}
+
+
+
+.main-contents{
+  width: 960px; /* 横幅930px */
+  margin: 0px auto 64px; /* 中央寄せ */
+  display: flex; /* Flexboxを設定 */
+  flex-wrap: wrap; /*子要素が親要素の横幅いっぱいに配置されたら改行し、下に配置し始める設定 */
+  gap: 72px;
+}
+
+
+
+.main-contents-box{
+  width: 272px; /* 横幅300px */
+  height: 272px; /* 高さ300px */
+  background-size: cover; /* 縦横比を維持したまま背景領域を埋め尽くす */
+  background-position: center; /* 背景画像を中央に配置 */
+}
+
+
+.desk{
+    background-image: url(img/sketch.jpg); /* 背景画像をimgフォルダ内のsketch.jpgに設定 */
+}
+
+.pc-blue{
+    background-image: url(img/websuku.png); /* 背景画像をimgフォルダ内のwebsuku.pngに設定 */
+}
+
+.write-board{
+    background-image: url(img/write.jpg); /* 背景画像をimgフォルダ内のwrite.jpgに設定 */
+}
+
+.pc-yellow{
+    background-image: url(img/webcamp.png); /* 背景画像をimgフォルダ内のwebcamp.pngに設定 */
+}
+
+.talk{
+    background-image: url(img/talk.jpg); /* 背景画像をimgフォルダ内のtalk.jpgに設定 */
+}
+
+.pc-pink{
+    background-image: url(img/webcamp-mother.png); /* 背景画像をimgフォルダ内のwebcamp-mother.pngに設定 */
+}
+
+.viewall{
+  width: 960px;
+  height: 60px;
+  margin: 0px auto 128px;
+}
+
+.viewall-container{
+  width: 265px;
+  height: 60px;
+  border-radius: 30px;
+  background-color: black;
+  margin: 0 auto;
+}
+
+.viewall-container a{
+  display: block;
+  font-size: 18px;
+  font-weight: 600;
+  font-family: Raleway;
+  line-height: 200%;
+  color: white;
+  padding: 12px 100px;
+  text-decoration: none;
+}
+
+.viewall-container:hover{
+  background-color: #888888;
+}
+
+.Profile {
+  width: 100%;
+  background-color: #FFF7F2;
+  color: #414141;
+  margin-top: 128px;
+}
+
+.Profile-container{
+  width: 100%;
+  padding: 128px 16.59% 128px;
+}
+
+#Profile-title {
+  text-align: center;
+  font-size: 36px;
+  font-family: Raleway;
+  line-height: 160%;
+}
+
+.Profile-text {
+  font-family: Noto sans JP;
+  text-align: left;
+  padding: 0px 80px 30px;
+  font-weight: 180%;
+}
+
+.Profile-contents {
+  width: 800px;
+  display: flex;
+  margin: 0 auto;
+  font-family: Noto sans JP;
+}
+
+.Profile-image {
+  flex-basis: 400px;
+}
+
+.Profile-text{
+  font-family: Noto sans JP;
+  font-weight: 180%;
+}
+
+.Name-and-Skill {
+  width: 400px;
+}
+
+.MyName-title,.MySkill-title {
+  font-size: 20px;
+  line-height: 30px;
+}
+
+.MyName-text{
+  display: block;
+  margin: 9px 0px 30px;
+}
+
+.Blogs{
+  width: 100%;
+}
+
+.blogs-container{
+  width: 960px;
+  margin: 128px auto;
+}
+
+.blogs-title{
+  text-align: center;
+  font-size: 36px;
+  font-family: Noto sans JP;
+  line-height: 160%;
+  color: #414141;
+}
+
+.blogs-pagelink a{
+  color: #909090;
+  line-height: 180%;
+}
+
+.blogs-contents-box{
+  width: 960px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 64px 72px;
+}
+
+.blog-box{
+  width: 272px;
+  height: 319px;
+  text-decoration: none;
+  font-family: Noto sans JP;
+}
+
+.blog-box a{
+  text-decoration: none;
+}
+
+.blog-box img{
+  object-fit: cover;
+}
+
+.blog-update-date, .blog-page-title{
+  text-decoration: none;
+}
+
+.blog-update-date{
+  display: block;
+  font-size: 12px;
+  line-height: 145%;
+  color: #EC715F;
+  margin: 8px 0px 14px;
+}
+
+.blog-page-title{
+  font-size: 20px;
+  font-weight: bold;
+  color: #414141;
+}
+
+
+
+
+
+footer {
+  width: 100%; /* 横幅100% */
+  text-align: center; /* 横方向に中央寄せで文字を配置する。*/
+  background-color: #EC715F; /* 背景色をカラーコードで指定 */
+}
+
+.footer-container{
+  width: 100%;
+  height: 310px;
+  background-color: #EC715F;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.footer-container a{
+  text-decoration: none;
+}
+
+.footer-buttoncontact {
+  margin: 59px auto 20px;
+  box-sizing: content-box;
+  width: 277px;
+  height: 60px;
+  background-color: white;
+  border-radius: 30px;
+  overflow: hidden;
+}
+
+.footer-buttoncontact:hover {
+  background-color: #F2D6D2;
+}
+
+.button-text{
+  font-size: 20px;
+  font-weight: bold;
+  display: block;
+  width: 77px;
+  height: 29px;
+  color: #EC715F;
+  margin: 15.5px auto;
+  text-align: center;
+  text-decoration: none;
+}
+
+.footer-icon-container {
+  width: 210px;
+  height: 94px;
+  margin: 0px auto 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.footer-icon-facebook {
+  width: 30px;
+  height: 30px;
+  background-image: url(img/icon-facebook.png);
+}
+
+.footer-icon-X {
+  width: 30px;
+  height: 30px;
+  background-image: url(img/icon-x.png);
+}
+
+.footer-icon-instagram {
+  width: 30px;
+  height: 30px;
+  background-image: url(img/icon-instagram.png);
+}
+
+.line {
+  width: 100%;
+  height: 1px;
+  background-color: white;
+}
+
+.footer-copyright {
+  color: white; /* 文字色を白に設定 */
+  line-height: 17px;
+  margin: 20px auto;
+}
+
+/* =========================
+      hamburger menu
+=========================== */
+
+.pc-logo {
+  display: block;
+}
+
+.sm-logo {
+  display: none;
+}
+
+#drawer_input {
+  display: none;
+}
+
+.drawer_open {
+  display: none;
+}
+
+/* =========================
+ スマホ用（width 480px）
+=========================== */
+
+@media screen and (max-width: 480px) {
+
+  html, body, header, nav, main, .main-visual, .main-visual-text, .main-contents, .works, .viewall, .Profile, .blogs-container, .blogs-contents, footer {
+      width: 100%;
+  }
+
+  .none {
+      display: none !important;
+  }
+
+  .pc-logo {
+      display: none;
+  }
+
+  .sm-logo {
+      display: block;
+      margin: 0;
+      height: 70px;
+  }
+
+  /* =========================
+           header
+  =========================== */
+
+  .heading a {
+      display: block;
+      padding-top: 7px;
+  }
+
+  .nav-list {
+      padding: 0;
+      display: block;
+  }
+
+  /* =========================
+        hamburger menu
+  =========================== */
+
+  .nav-list {
+      padding: 0;
+      display: block;
+  }
+
+  .drawer_hidden {
+      display: none;
+  }
+
+  .drawer_open {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      z-index: 100;
+      cursor: pointer;
+      top: 18px;
+      right: 26px;
+      width: 40px;
+      height: 40px;
+  }
+
+  .drawer_open span, .drawer_open span:before, .drawer_open span:after {
+      content: '';
+      display: block;
+      height: 3px;
+      width: 35px;
+      border-radius: 3px;
+      background: #F9F9F9;
+      transition: 0.5s;
+      position: absolute;
+  }
+
+  .drawer_open span:before {
+      bottom: 10px;
+  }
+
+  .drawer_open span:after {
+      top: 10px;
+  }
+
+  #drawer_input:checked~.drawer_open span {
+      background: rgba(255, 255, 255, 0);
+  }
+
+  #drawer_input:checked~.drawer_open span::before {
+      bottom: 0;
+      transform: rotate(45deg);
+  }
+
+  #drawer_input:checked~.drawer_open span::after {
+      top: 0;
+      transform: rotate(-45deg);
+  }
+
+  nav {
+      height: 100%;
+      position: fixed;
+      left: -100%;
+      background: #EC715F;
+      transition: .5s;
+      text-align: center;
+  }
+
+  .nav-list-item {
+      height: 80px;
+      width: 79px;
+      margin: 0 auto;
+  }
+
+  .nav-list-item:first-child {
+      margin-top: 16px;
+  }
+
+  .nav-list-item:last-child {
+      width: 200px;
+      bottom: 110px;
+      position: absolute;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+  }
+
+  .nav-list-item a {
+      font-size: 24px;
+  }
+
+  #drawer_input:checked~nav {
+      left: 0;
+  }
+
+  .contact-button {
+      color: #EC715F;
+      text-align: center;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 145%;
+  }
+
+  .main-visual{
+    height: 550px;
+  }
+
+  .main-visual-text{
+    margin: 0 auto;
+  }
+
+  .main-visual-title{
+    display: inline-block;
+    padding: 176px 51px 10px 46px;
+    font-size: 72px;
+    line-height: 110%;
+    text-align: center;
+  }
+
+  .main-visual-subtitle{
+    display: block;
+    width: 430px;
+    margin-left: 20px;
+  }
+
+  .Works{
+    margin-top: 64px;
+  }
+
+  .Profile{
+    margin-top: 0px;
+  }
+
+  .main-contents{
+    width: 420px;
+    height: 632px;
+    margin: 0px 30px 64px;
+    gap: 16px 20px;
+  }
+
+  .main-contents-box{
+    width: 200px;
+    height: 200px;
+  }
+
+
+  .viewall{
+    margin: 0px auto 64px;
+  }
+
+  .Profile-container{
+    padding: 64px 30px 64px;
+  }
+
+  .Profile-text{
+    padding:0px 0px 30px;
+  }
+
+  .Profile-contents{
+    width: 420px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .Profile-image{
+    flex: 1;
+    width: 250px;
+    height: 250px;
+    margin: 15px auto 15px;
+  }
+
+  .Name-container{
+    flex: 2;
+    width: 420px;
+    height: 277px;
+  }
+
+  .MyName-title{
+    margin: 0px 0px 16px;
+  }
+
+  .MySkill-container{
+    flex: 3;
+    width: 420px;
+    height: 103px;
+  }
+
+  .blogs-container{
+    margin: 64px auto;
+  }
+
+  .blogs-pagelink{
+    margin-left: 30px;
+  }
+
+  .blogs-contents-box{
+    width: 420px;
+    margin: 0px auto;
+    gap: 48px;
+  }
+
+  .blog-box{
+    width: 420px;
+    height: 356px;
+  }
+
+  .image{
+    width: 420px;
+    height: 254px;
+  }
+
+
+}
+
+

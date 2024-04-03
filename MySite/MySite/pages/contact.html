@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <!-- レスポンシブデザイン用のビューポート設定　-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- CSSファイルの読み込み -->
+  <link rel="stylesheet" href="contact.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <title>MySite</title>
+</head>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="../script.js"></script>
+
+  <body>
+
+    <!-- header -->
+    <header>
+      <h1 class="heading sm-logo">
+          <a href="../index.html">
+            <img src="../img/mysite.png" alt="mysite.png">
+          </a>
+      </h1>
+    <input id="drawer_input" class="drawer_hidden" type="checkbox">
+    <!--ハンバーガーアイコン -->
+    <label for="drawer_input" class="drawer_open">
+        <span></span>
+    </label>
+    <nav>
+      <h1 class="heading pc-logo">
+        <a href="../index.html">
+          <img src="../img/mysite.png" alt="mysite.png">
+        </a>
+      </h1>
+      <ul class="nav-list">
+        <li class="nav-list-item">
+          <a href="../pages/works.html">Works</a>
+        </li>
+        <li class="nav-list-item">
+          <a href="../index.html#Profile">Profile</a>
+        </li>
+        <li class="nav-list-item">
+          <a href="../pages/blogs.html">Blogs</a>
+        </li>
+        <li class="nav-list-item">
+          <a href="../pages/contact.html">
+            <p class="nav-contact">Contact</p>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+    <div class="main-title">
+      <div class="main-title-container">
+        <p class="main-title-text">Contact</p>
+      </div>
+    </div>
+
+
+    <main>
+      <div class="reply-text-area">
+        <div class="reply-text">
+          お問い合わせはこちらからお願い申し上げます。２営業日以内にご返信させて頂きます。
+      </div>
+      </div>
+      <form>
+        <div class="fname-box">
+          <label for="fname">お名前</label>
+          <input type="text" id="fname" name="fname" placeholder="お名前を入力してください" style="height: 50px;">
+        </div>
+        <div class="email-box">
+          <label for="email">メールアドレス</label>
+          <input type="email" id="email" name="email" placeholder="メールアドレスを入力してください" style="height: 50px;">
+        </div>
+        <div class="message-box">
+          <label for="message">お問い合わせ内容</label>
+          <textarea id="message" name="message" placeholder="お問い合わせ内容を入力してください" style="height:300px;"></textarea>
+        </div>
+      </form>
+
+      <div class="send-button">
+        <div class="send-button-container">
+          <a href="../pages/contact.html">
+            <div class="send-button-body">
+              <div class="send-button-text">
+                <p>送信</p>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <script>
+        document.getElementById('fname').addEventListener('input', function() {
+            this.placeholder = '';
+            if (this.value) {
+                this.style.backgroundColor = '#E8F0FE';
+            } else {
+                this.style.backgroundColor = 'white';
+            }
+        });
+        document.getElementById('email').addEventListener('input', function() {
+            this.placeholder = '';
+            if (this.value) {
+                this.style.backgroundColor = '#E8F0FE';
+            } else {
+                this.style.backgroundColor = 'white';
+            }
+        });
+        document.getElementById('message').addEventListener('input', function() {
+            this.placeholder = '';
+        });
+      </script>
+
+
+    </main>
+
+    <footer>
+      <div class="footer-container">
+        <a href="../pages/contact.html">
+          <div class="footer-buttoncontact">
+            <div class="button-text">Contact</div>
+          </div>
+        </a>
+        <div class="footer-icon-container">
+          <a href="../index.html">
+            <div class="footer-icon-facebook"></div>
+          </a>
+          <a href="../index.html">
+            <div class="footer-icon-X"></div>
+          </a>
+          <a href="../index.html">
+            <div class="footer-icon-instagram"></div>
+          </a>
+        </div>
+        <div class="line"></div>
+        <p class="footer-copyright">©2024 My Site</p>
+      </div>
+    </footer>
+  </body>
+</html>
